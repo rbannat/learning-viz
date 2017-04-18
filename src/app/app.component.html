@@ -1,3 +1,49 @@
-<h1>
-  {{title}}
-</h1>
+<md-sidenav-container>
+
+  <md-sidenav #start mode="side" opened="true">
+    <md-toolbar>
+      <h3>LearningViz</h3>
+    </md-toolbar>
+    <md-nav-list>
+      <a md-list-item routerLink="/dashboard" class="nav-link" routerLinkActive="active">Dashboard</a>
+      <a md-list-item routerLink="/customers" class="nav-link" routerLinkActive="active">Customers</a>
+      <a md-list-item routerLink="/index-cases" class="nav-link" routerLinkActive="active">Index Cases</a>
+    </md-nav-list>
+  </md-sidenav>
+
+  <md-sidenav #end align="end" mode="side" (open)="sidebarToggled()" (close)="sidebarToggled()">
+    <div class="main-content" fxLayout="column">
+
+    <md-toolbar>
+      <span>Filter</span>
+      <span class="example-fill-remaining-space"></span>
+      <button class="pull-right" md-button (click)="end.close()"><md-icon class="md-24">clear</md-icon></button>
+    </md-toolbar>
+
+    <app-filter fxFlex></app-filter>
+
+    </div>
+  </md-sidenav>
+
+  <div class="main-content" fxLayout="column">
+
+    <md-toolbar color="primary">
+      <span>{{title}}</span>
+
+      <!-- This fills the remaining space of the current row -->
+      <span class="example-fill-remaining-space"></span>
+
+      <!--<md-input-container>-->
+      <!--<input md-input type="search" placeholder="Search">-->
+      <!--</md-input-container>-->
+
+      <button md-button *ngIf="!end.opened" (click)="end.open()"><md-icon class="md-24">filter_list</md-icon></button>
+    </md-toolbar>
+
+    <div class="main-content__outlet" fxFlex>
+      <router-outlet></router-outlet>
+    </div>
+
+  </div>
+
+</md-sidenav-container>

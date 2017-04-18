@@ -1,0 +1,27 @@
+app-forced-graph .links line {
+  stroke: #999;
+  stroke-opacity: 0.6;
+}
+
+app-forced-graph .link {
+  fill: none;
+  stroke: #666;
+}
+
+app-forced-graph .nodes circle {
+  stroke: #fff;
+  stroke-width: 1px;
+  fill: rgb(33, 150, 243);
+  cursor: pointer;
+}
+
+app-forced-graph .labels text {
+  pointer-events: none;
+  font: 10px sans-serif;
+  fill: #333333;
+  text-anchor: middle;
+}
+
+app-forced-graph #default {
+  fill: #666;
+}

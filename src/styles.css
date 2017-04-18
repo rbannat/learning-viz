@@ -1,1 +1,66 @@
 /* You can add global styles to this file, and also import other style files */
+html, body, app-root, md-sidenav-container, .main-content {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.main-content__outlet, app-filter {
+  overflow: auto;
+}
+
+md-sidenav {
+  width: 200px;
+}
+
+.mat-sidenav-end {
+  width: 350px;
+}
+
+md-card {
+  margin: 10px;
+}
+
+.example-fill-remaining-space {
+  flex: 1 1 auto;
+}
+
+.pm-content-number {
+  font-size: 24px;
+}
+
+.action-request {
+  background-color: #FFC107 !important; /*Amber*/
+}
+
+.info-request {
+  background-color: #009688 !important; /*Teal*/
+}
+
+.complaint {
+  background-color: #E91E63 !important; /*Pink*/
+}
+
+.praise {
+  background-color: #2196F3 !important; /*Blue*/
+}
+
+.unknown {
+  background-color: #9E9E9E !important; /*Grey*/
+}
+
+.provide-info {
+  background-color: #03A9F4 !important; /*Light Blue*/
+}
+
+md-checkbox .mat-checkbox-inner-container {
+  margin-top: 0;
+}
+
+md-checkbox .mat-checkbox-layout .mat-checkbox-label {
+  line-height: 20px;
+}
+
+app-filter .mat-tab-body {
+  overflow-y: hidden !important;
+}
